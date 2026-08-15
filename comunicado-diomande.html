@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comunicado Oficial: Jafrin Juin</title>
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+  @font-face{
+    font-family:RMNeue;
+    font-style:normal;
+    font-weight:400;
+    src:url("https://www.realmadrid.com/media/RMNeue-Regular.woff2") format("woff2");
+    font-display:swap;
+  }
+  @font-face{
+    font-family:RMNeue;
+    font-style:normal;
+    font-weight:600;
+    src:url("https://www.realmadrid.com/media/RMNeue-SemiBold.woff2") format("woff2");
+    font-display:swap;
+  }
+  @font-face{
+    font-family:RMNeue;
+    font-style:normal;
+    font-weight:700;
+    src:url("https://www.realmadrid.com/media/RMNeue-Bold.woff2") format("woff2");
+    font-display:swap;
+  }
+
+  :root{
+    --rm-navy:#0F2145;        /* grayscale-title */
+    --rm-body:#43526E;        /* grayscale-body */
+    --rm-body-light:#788398;  /* grayscale-body-light / hint */
+    --rm-border:#E1E5EA;      /* grayscale-line */
+    --rm-pill-border:#C7CCD6; /* grayscale-light */
+    --rm-blue:#3E31FA;        /* primary-default */
+    --rm-bg-input:#EDEFF2;    /* grayscale-input */
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  body{
+    font-family:RMNeue, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color:var(--rm-navy);
+    background:#fff;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 40px;
+    border-bottom:1px solid var(--rm-border);
+  }
+
+  .header-left{
+    display:flex;
+    align-items:center;
+    gap:18px;
+  }
+
+  .icon-btn{
+    background:none;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    color:var(--rm-navy);
+  }
+
+  .crest{
+    width:38px;
+    height:38px;
+    display:block;
+  }
+
+  nav.main-nav{
+    display:flex;
+    gap:34px;
+  }
+
+  nav.main-nav a{
+    color:var(--rm-navy);
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:.1px;
+  }
+
+  nav.main-nav a:hover{
+    text-decoration:underline;
+  }
+
+  .header-right{
+    display:flex;
+    align-items:center;
+    gap:26px;
+  }
+
+  .sponsor-logo{
+    height:20px;
+    width:auto;
+    display:block;
+  }
+
+  .sponsor-logo.emirates{
+    height:36px;
+  }
+
+  .dots-btn{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    cursor:pointer;
+  }
+  .dots-btn span{
+    width:3px;height:3px;border-radius:50%;background:#333;
+  }
+
+  .acceder-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    border:1.5px solid var(--rm-blue);
+    color:var(--rm-blue);
+    border-radius:22px;
+    padding:9px 20px;
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+
+  /* ---------- MAIN CONTENT ---------- */
+  main{
+    max-width:1120px;
+    margin:0 auto;
+    padding:56px 40px 90px;
+  }
+
+  h1.title{
+    font-size:56px;
+    font-weight:700;
+    line-height:1.1;
+    letter-spacing:-.5px;
+    color:var(--rm-navy);
+    margin-bottom:32px;
+    max-width:900px;
+  }
+
+  .featured-image{
+    width:100%;
+    max-width:900px;
+    border-radius:4px;
+    overflow:hidden;
+    background:#e7e8ea;
+  }
+
+  .featured-image img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+
+  .meta-row{
+    max-width:900px;
+    margin-top:22px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.3px;
+    color:var(--rm-body-light);
+    text-transform:uppercase;
+  }
+
+  .meta-row .date{
+    font-weight:500;
+    margin-left:6px;
+  }
+
+  p.body-text{
+    max-width:900px;
+    margin-top:26px;
+    font-size:19px;
+    line-height:1.55;
+    color:var(--rm-navy);
+    font-weight:500;
+  }
+
+  .related{
+    max-width:900px;
+    margin-top:64px;
+  }
+
+  .related h3{
+    font-size:14px;
+    font-weight:700;
+    color:var(--rm-body-light);
+    margin-bottom:16px;
+  }
+
+  .pills{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+
+  .pill{
+    display:inline-block;
+    padding:9px 20px;
+    border:1px solid var(--rm-pill-border);
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--rm-navy);
+    text-decoration:none;
+    background:#fff;
+  }
+
+  .pill:hover{
+    border-color:var(--rm-navy);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    nav.main-nav{display:none;}
+    .sponsor-logo{display:none;}
+    header{padding:14px 20px;}
+    main{padding:32px 20px 60px;}
+    h1.title{font-size:34px;}
+    p.body-text{font-size:17px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <button class="icon-btn" aria-label="Menu">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M0 1H22" stroke="#1a2340" stroke-width="2"/><path d="M0 8H22" stroke="#1a2340" stroke-width="2"/><path d="M0 15H22" stroke="#1a2340" stroke-width="2"/></svg>
+    </button>
+    <a href="#"><img class="crest" src="assets/parche-15-ucl.svg" alt="Real Madrid" /></a>
+  </div>
+
+  <nav class="main-nav">
+    <a href="#">Socios</a>
+    <a href="#">Madridistas</a>
+    <a href="#">Entradas</a>
+    <a href="#">Área VIP</a>
+    <a href="#">Tour</a>
+    <a href="#">Tienda</a>
+    <a href="#">RM Play</a>
+  </nav>
+
+  <div class="header-right">
+    <img class="sponsor-logo emirates" src="assets/emirates.svg" alt="Emirates" />
+    <img class="sponsor-logo adidas" src="assets/adidas.svg" alt="Adidas" />
+    <div class="dots-btn" aria-label="More">
+      <span></span><span></span><span></span>
+    </div>
+    <a class="acceder-btn" href="#">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zM12 14.4c-3.3 0-9.8 1.6-9.8 4.9v2.5h19.6v-2.5c0-3.3-6.5-4.9-9.8-4.9z" fill="var(--rm-blue)"/></svg>
+      Acceder
+    </a>
+  </div>
+</header>
+
+<main>
+  <h1 class="title">Comunicado Oficial: Jafrin Juin</h1>
+
+  <div class="featured-image">
+    <img src="assets/cos.jpg" alt="Comunicado Oficial: Jafrin Juin" />
+  </div>
+
+  <div class="meta-row">
+    COMUNICADO OFICIAL. <span class="date">14/08/2026</span>
+  </div>
+
+  <p class="body-text">
+    The club reached an agreement with Jafrin Juin, who joins our club for the next eternity, starting from August 14, 2026.
+  </p>
+
+  <div class="related">
+    <h3>Temas relacionados</h3>
+    <div class="pills">
+      <a class="pill" href="#">Club</a>
+      <a class="pill" href="#">Comunicados</a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
